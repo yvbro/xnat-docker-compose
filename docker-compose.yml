@@ -4,7 +4,6 @@ services:
     build:
       context: ./xnat
       args:
-        XNAT_VER: '1.7.4.1'
         SMTP_ENABLED: 'false'
         SMTP_HOSTNAME: fake.fake
         SMTP_PORT:
@@ -23,6 +22,7 @@ services:
       - "8081:8080"
       - "8000:8000"
     volumes:
+      - ./webapps:/usr/local/tomcat/webapps
       - ./xnat-data/home/logs:/data/xnat/home/logs
       - ./xnat-data/home/plugins:/data/xnat/home/plugins
       - ./xnat-data/archive:/data/xnat/archive
