@@ -2,5 +2,7 @@
 *.swp
 *.swo
 postgres-data*
-xnat-data*
+xnat-data/archive
+xnat-data/build
+xnat-data/home/logs
 webapps/
